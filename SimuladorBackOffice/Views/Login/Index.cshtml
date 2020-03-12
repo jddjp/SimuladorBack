@@ -1,0 +1,148 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<link href="~/css/site.css" />-->
+</head>
+
+<body style="background-image: url('https://us.123rf.com/450wm/apostrophe/apostrophe1303/apostrophe130300064/18622074-fondo-morado.jpg?ver=6');">
+    <script languague="javascript">
+    function Calcular() {
+            div = document.getElementById('Calcular');
+            div.style.display = '';
+        }
+    </script>
+    <!-- Button trigger modal -->
+    <div class="row justify-content-end">
+        <button type="button" class="btn btn-primary aling-right" data-toggle="modal" data-target="#exampleModal">
+            Login
+        </button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Email</label><input class="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" /></div>
+                        <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" /></div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox"><input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" /><label class="custom-control-label" for="rememberPasswordCheck">Remember password</label></div>
+                        </div>
+                        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0"><a class="small" href="password.html">Forgot Password?</a></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                    <a class="btn btn-primary" href="index.html">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---simulador contenedor de este-->
+
+    <div class="container rounded-lg mt-5 " style="background-color:aliceblue; border-radius:10px">
+        <div class="row ">
+            <div class="col">
+                <div class="card shadow-lg rounded-lg mt-5 text-white ">
+                    <div class="text-center " style="background-color:#2196f3 ">
+                        <h1 class="h4 text-gray-900 mt-2">Simulador</h1>
+                    </div>
+
+                    <div class="card-body text-dark">
+                        <form class="form-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Cantidad Total</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Cantidad Mensual</label>
+                            </div>
+                            <h1 class="h4 text-gray-900 mb-4">¿Cuánto necesitas?</h1>
+                            <input type="text" class="form-control" id="validationTooltip01" placeholder="cantidad" required>
+
+                            <h1 class="h4 text-gray-900 mb-4">Forma de pago</h1>
+                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                <option selected>Elije...</option>
+                                <option value="1">Quincenal</option>
+                                <option value="2">Mensual</option>
+                            </select>
+
+                            <h1 class="h4 text-gray-900 mb-4">¿A qué plazo quieres pagarlo?</h1>
+                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                <option selected>Elije...</option>
+                                <option value="1">6 meses</option>
+                                <option value="2">12 meses</option>
+                                <option value="3">18 meses</option>
+                                <option value="3">24 meses</option>
+                                <option value="3">36 meses</option>
+                            </select>
+
+                        </form>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" id="Calcula" onclick="Calcular();">
+                            Calcular
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col " >
+                <div class="card shadow-lg  rounded-lg mt-5 ">
+                    <div class="table-responsive-lg">
+                        <!--otro div seccion que aparece del simulador una vez poniendo las cantidades que son-->
+                        <table class="table " width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Tasa</th>
+                                    <th>Monto pago</th>
+                                    <th>N. Pago</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Tasa de interes anual</th>
+                                    <th>8.9%</th>
+                                    <th>18.5%</th>
+                                    <th>45.0%</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>Pago mensual</td>
+                                    <td>$4095.22</td>
+                                    <td>$4635.09</td>
+                                    <td>$6339,26</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--fin de simulador-->
+</body>
+</html>
+
+
+
