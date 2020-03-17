@@ -1,48 +1,163 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SimuladorBackOffice</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="~/lib/MenuLateral/sidebar-05/css/style.css" rel="stylesheet" />
 </head>
-<body>
+<body style="background-image: url('https://us.123rf.com/450wm/apostrophe/apostrophe1303/apostrophe130300064/18622074-fondo-morado.jpg?ver=6');">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SimuladorBackOffice</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg" style="background-color:#29073D; ">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="brand-logo">
+                <img src="http://aprecia.com.mx/wp-content/themes/Aprecia/images/aprecia-financiera-logo.png" class="img-responsive" width="120" alt="Aprecia Financiera">
+            </a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+         
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" ">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars " style="color:#FFC425"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <div class="p-4">
+                
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a  asp-area="" asp-controller="Home" asp-action="Index"><span class="fa fa-home mr-3"  style="color:#FFC425; font-size: 35px;"></span> Inicio</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Index" ><span class="fa fa-user mr-3" style="color:#FFC425; font-size: 35px;"></span> Prospectos</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-briefcase mr-3" style="color:#FFC425; font-size: 35px;"></span> Clientes</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-sticky-note mr-3" style="color:#FFC425; font-size: 35px;"></span>Directorio</a>
+                    </li>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - SimuladorBackOffice - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    <li>
+                        <a href="#"><span class="fa fa-cogs mr-3" style="color:#FFC425; font-size: 35px;"></span> Configuracion</a>
+                    </li>
+
+                </ul>
+
+                <div class="mb-5">
+                    <h3 class="h6 mb-3">Informacion Aqui</h3>
+
+                </div>
+
+                <div class="footer">
+                    <p>
+                        Aprecia
+                    </p>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    </div>
+    <script src="~/lib/MenuLateral/sidebar-05/js/jquery.min.js"></script>
+    <script src="~/lib/MenuLateral/sidebar-05/js/popper.js"></script>
+    <script src="~/lib/MenuLateral/sidebar-05/js/bootstrap.min.js"></script>
+    <script src="~/lib/MenuLateral/sidebar-05/js/main.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+
+
+<!--
+    
+
+
+<body style="background-image: url('https://us.123rf.com/450wm/apostrophe/apostrophe1303/apostrophe130300064/18622074-fondo-morado.jpg?ver=6');">
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg" style="background-color:#29073D; ">
+            <a href="#!" class="brand-logo">
+            <img src="http://aprecia.com.mx/wp-content/themes/Aprecia/images/aprecia-financiera-logo.png" class="img-responsive" width="120" alt="Aprecia Financiera"></a>
+
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Directorio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Reportes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Prospectos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Clientes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+ 
+        </main>
+    </div>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+    </html>
+    -->
