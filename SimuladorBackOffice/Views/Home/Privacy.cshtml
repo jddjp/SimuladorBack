@@ -1,6 +1,463 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿
+<link href="~/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="container shadow-lg" style="background-color:#ffffff; border-radius:10px">
+    <br />
+    <div class="row">
+        <div class="col-4">
+           
+        </div>
+        <div class=" col-4">
+            <div class="text-center">
+                <h5 class="display-4 text-warning">Simulador</h5>
+
+            </div>
+        </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+    <br />
+    <div class="row">
+
+        <div class="col-8">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+
+
+                    <div class="card-header bg-primary" id="headingOne">
+
+                        <span class="oi oi-person " style="color:#FFC425; font-size: 35px;"></span>
+
+                        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Datos de usuario
+                        </a>
+
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom01">Primer Nombre</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom02">Segundo Nombre</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Apellido Paterno</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Apellido Paterno</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom04">Fecha de nacimiento</label>
+                                        <select class="custom-select" id="validationCustom04" required>
+                                            <option selected disabled value="">Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom04">Estado de Recidencia</label>
+                                        <select class="custom-select" id="validationCustom04" required>
+                                            <option selected disabled value="">Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid state.
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Correo Electronico</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">RFC</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">¿Es Renovacion?</label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                <label class="custom-control-label" for="customSwitch1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </form>
+
+                            <script>
+                                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                (function () {
+                                    'use strict';
+                                    window.addEventListener('load', function () {
+                                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                        var forms = document.getElementsByClassName('needs-validation');
+                                        // Loop over them and prevent submission
+                                        var validation = Array.prototype.filter.call(forms, function (form) {
+                                            form.addEventListener('submit', function (event) {
+                                                if (form.checkValidity() === false) {
+                                                    event.preventDefault();
+                                                    event.stopPropagation();
+                                                }
+                                                form.classList.add('was-validated');
+                                            }, false);
+                                        });
+                                    }, false);
+                                })();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="card-header bg-primary" id="headingTwo">
+
+                        <span class="oi oi-briefcase " style="color:#FFC425; font-size: 35px;"></span>
+                        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                            Datos de Empleo
+                        </a>
+
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+
+                        <div class="card-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom01">Primer Nombre</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom02">Segundo Nombre</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Apellido Paterno</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Apellido Paterno</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom04">Fecha de nacimiento</label>
+                                        <select class="custom-select" id="validationCustom04" required>
+                                            <option selected disabled value="">Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom04">Estado de Recidencia</label>
+                                        <select class="custom-select" id="validationCustom04" required>
+                                            <option selected disabled value="">Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid state.
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Correo Electronico</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">RFC</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">¿Es Renovacion?</label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                <label class="custom-control-label" for="customSwitch1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </form>
+
+                            <script>
+                                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                (function () {
+                                    'use strict';
+                                    window.addEventListener('load', function () {
+                                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                        var forms = document.getElementsByClassName('needs-validation');
+                                        // Loop over them and prevent submission
+                                        var validation = Array.prototype.filter.call(forms, function (form) {
+                                            form.addEventListener('submit', function (event) {
+                                                if (form.checkValidity() === false) {
+                                                    event.preventDefault();
+                                                    event.stopPropagation();
+                                                }
+                                                form.classList.add('was-validated');
+                                            }, false);
+                                        });
+                                    }, false);
+                                })();
+                            </script>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header bg-primary" id="headingThree">
+
+                        <span class="oi oi-credit-card " style="color:#FFC425; font-size: 35px;"></span>
+                        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                            Datos Financieros
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom01">Primer Nombre</label>
+                                        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom02">Segundo Nombre</label>
+                                        <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Apellido Paterno</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Apellido Paterno</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom04">Fecha de nacimiento</label>
+                                        <select class="custom-select" id="validationCustom04" required>
+                                            <option selected disabled value="">Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustom04">Estado de Recidencia</label>
+                                        <select class="custom-select" id="validationCustom04" required>
+                                            <option selected disabled value="">Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid state.
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">Correo Electronico</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">RFC</label>
+                                        <div class="input-group">
+
+                                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationCustomUsername">¿Es Renovacion?</label>
+                                        <div class="input-group">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                                <label class="custom-control-label" for="customSwitch1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+                            </form>
+
+                            <script>
+                                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                (function () {
+                                    'use strict';
+                                    window.addEventListener('load', function () {
+                                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                        var forms = document.getElementsByClassName('needs-validation');
+                                        // Loop over them and prevent submission
+                                        var validation = Array.prototype.filter.call(forms, function (form) {
+                                            form.addEventListener('submit', function (event) {
+                                                if (form.checkValidity() === false) {
+                                                    event.preventDefault();
+                                                    event.stopPropagation();
+                                                }
+                                                form.classList.add('was-validated');
+                                            }, false);
+                                        });
+                                    }, false);
+                                })();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <button type="button" class="btn btn-secondary btn-sm">Cancelar</button>
+                <button type="button" class="btn btn-primary btn-sm">Calcular</button>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+            <div class="card text-white bg-warning mb-3 shadow-lg" style="max-width: 18rem;">
+                <div class="card-header">Resultados</div>
+                <div class="card-body">
+                    <h5 class="card-title">Informacion referente a la simulacion</h5>
+                    <p class="card-text">Graficos y o datos de la simulacion.</p>
+                </div>
+            </div>
+            <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                <div class="card-header">Seguro</div>
+                <div class="card-body">
+                    <h5 class="card-title">Informacionreferente al seguro</h5>
+                    <p class="card-text">Informacion del costo del seguro.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+
+</div>
+
+</div>

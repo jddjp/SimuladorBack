@@ -1,8 +1,102 @@
-﻿@{
+@{
     ViewData["Title"] = "Home Page";
 }
+<link href="~/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<div class="container shadow-lg" style="background-color:#ffffff; border-radius:10px">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome Daniel</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class=" col-4">
+            <div class="text-center">
+                <h5 class="display-4 text-warning">Inicio</h5>
+            </div>
+        </div>
+        <div class="col-4">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-8">
+            <a asp-area="" asp-controller="Home" asp-action="SimuladorCpto"><span class="oi oi-calculator " style="color:#FFC425; font-size: 45px;"></span></a>
+            <div class="col-8">
+                <p class="text-center text-warning">Resultados de Clientes</p>
+                <table class="table shadow-lg">
+                    <thead class="text-warning" style="background-color:#007bff">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Clientes </th>
+                            <th scope="col">Proceso</th>
+                            <th scope="col">Estatus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Revision</td>
+                            <td>En proceso</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Otto</td>
+                            <td>formalizacion</td>
+                            <td>Credito</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Abierto</td>
+                            <td>en proceso</td>
+                            <td>concluido</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+      
+        <div class="col-4">
+            <div class="card text-white bg-warning mb-3 shadow-lg" style="max-width: 18rem;">
+                <div class="card-header">Resultados</div>
+                <div class="card-body">
+                    <h5 class="card-title">Informacion referente a la simulacion</h5>
+                    <p class="card-text">Graficos y o datos de la simulacion.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class="col-4">
+
+        </div>
+        <div class="col-4">
+
+        </div>
+
+    </div>
+
+
+
 </div>
+<div class="container shadow-lg" style="background-color:#ffffff; border-radius:10px">
+
+    <div class="row">
+    </div>
+
+    <div class="col-4">
+    </div>
+ 
+
+
+</div>
+
+
