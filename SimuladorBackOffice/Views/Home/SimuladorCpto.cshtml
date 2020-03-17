@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewData["Title"] = "SimuladorCpto";
+}
+
+
+<link href="~/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<div class="container shadow-lg bg-warning" style="border-radius:10px">
+    <br />
+    <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class=" col-4">
+            <div class="text-center">
+                <h5 class="display-4 text-primary">Simulador</h5>
+            </div>
+        </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-8 bg-primary" style="border-radius:10px">
+            <div class="text-left">
+                <h6 class="text-warning">Datos personales</h6>
+            </div>
+        </div>
+       
+    </div>
+    <div class="row">
+
+        <div class=" col-8">
+            <form>
+
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault01" class="text-primary">Primer Nombre</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault01" placeholder="First name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Segundo Nombre</label>
+                        <input type="text" class="form-control border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefaultUsername" class="text-primary">RFC</label>
+
+                        <input type="text" class="form-control  border border-primary" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault01" class="text-primary">Curp</label>
+                        <input type="text" class=" border border-primary form-control" id="validationDefault01" placeholder="First name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Fecha de Nacimiento</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationCustomUsername" class="text-primary">¿Es Renovacion?</label>
+                        <div class="input-group">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 bg-primary" style="border-radius:10px">
+                        <div class="text-left">
+                            <h6 class="text-warning">Datos Laborales </h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault01" class="text-primary">Empresa</label>
+                        <input type="text" class=" border border-primary form-control" id="validationDefault01" placeholder="First name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Producto</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Periodicidad</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault01" class="text-primary">Plazo</label>
+                        <input type="text" class=" border border-primary form-control" id="validationDefault01" placeholder="First name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Fecha De Operacion</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 bg-primary" style="border-radius:10px">
+                        <div class="text-left">
+                            <h6 class="text-warning">Datos Financieros </h6>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Monto</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Salario Mensual</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Capacidad de endeudamiento</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+
+                    <div class="col-md-4 mb-3">
+                        <label for="validationDefault02" class="text-primary">Porcentaje De Descuento</label>
+                        <input type="text" class="form-control  border border-primary" id="validationDefault02" placeholder="Last name" required>
+                    </div>
+                   
+                </div>
+            </form>
+         
+        </div>
+
+
+        <div class="col-4">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem; border-radius:20px;">
+                <div class="card-header text-warning">Resultados</div>
+                <div class="card-body">
+                    <h5 class="card-title">Resultados de simulacion</h5>
+                    <p class="card-text">Descripcion de resultados</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+
+        </div>
+        <div class=" col-4">
+            <div class="text-center">
+                <button class="btn bg-primary text-warning">Consultar</button>
+            </div>
+        </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
