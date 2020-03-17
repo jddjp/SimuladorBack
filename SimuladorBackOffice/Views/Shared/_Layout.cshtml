@@ -6,11 +6,12 @@
     <title>@ViewData["Title"] - SimuladorBackOffice</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
+    <header style="background-color:indigo">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="background-color:indigo">
+            <div class="container" style="background-color:indigo">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SimuladorBackOffice</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +37,8 @@
     </div>
 
     <footer class="border-top footer text-muted">
+       
+
         <div class="container">
             &copy; 2020 - SimuladorBackOffice - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
