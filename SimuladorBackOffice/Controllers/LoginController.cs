@@ -140,9 +140,17 @@ namespace SimuladorBackOffice.Controllers
                 }
                 fechafindepago = fechafinquincena;
                 TimeSpan tsan = fechafindepago - fechainicio;
-                diasOperados = (tsan.Days)+1;
+               double diashoras = (fechafindepago - fechainicio).TotalHours/24;
+                
+                pruebatest = Convert.ToString(diashoras);
+                diasOperados = (tsan.Days);// esto se debe a que dias operados en horas es muy exacto entoncees sacaba un dia menos porque ya estaban varias horas corriendo del otro dia
+                if (diashoras > diasOperados) 
+                {
+                    diasOperados = (tsan.Days)+1;
 
-               
+                }
+
+
 
 
             }
@@ -199,9 +207,9 @@ namespace SimuladorBackOffice.Controllers
             }
             else
             {
-                pruebatest = "seguro";
+             //   pruebatest = "seguro";
                 seguro = (seguroPropuesto * cantPagoseguro) / 2;
-                pruebatest = Convert.ToString(cantPagoseguro);
+               // pruebatest = Convert.ToString(cantPagoseguro);
                 comisionFrecuencia = 0.06750;
 
             }
@@ -226,8 +234,8 @@ namespace SimuladorBackOffice.Controllers
 
 
 
-        [HttpPost]
-        public JsonResult calculoSimuladorGeneral(int cantidad, int plazo, int frecuencia)
+        [HttpPost]//la funcion de calculo del simulador general por funciones
+        public JsonResult calculoSimuladorConsumoGeneral(int cantidad, int plazo, int frecuencia)
         {
             // los tres valores que recibe la funcion cantidad es el monto a prestar, plazo a cuantos meses o quincenas a pagar frecuencia es si es quincenal, mensual o asi
             //declaracion de variables
@@ -411,7 +419,20 @@ namespace SimuladorBackOffice.Controllers
 
         }
 
+        [HttpPost]
+        //[HttpPost]
+        public JsonResult CalculoSimuladorGeneral(int cantidad, int plazo)
+        {
+            Login obj = new Login() { cantidad = cantidad, plazo = plazo };
+            Login obj2 = new Login() { cantidad = cantidad, plazo = plazo };
+            //  string name = "gola";
+            // obj.cantidad = cantidad;
+            // obj.plazo = plazo;
 
+
+            return Json(new List<Login>() { obj, obj2 });
+
+        }
 
 
         [HttpPost]
