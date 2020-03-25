@@ -8,15 +8,19 @@
   <ItemGroup>
     <Compile Remove="Views\Menu\**" />
     <Compile Remove="Views\NewFolder1\**" />
+    <Compile Remove="Views\SimuladorGeneral\**" />
     <Compile Remove="wwwroot\NewFolder\**" />
     <Content Remove="Views\Menu\**" />
     <Content Remove="Views\NewFolder1\**" />
+    <Content Remove="Views\SimuladorGeneral\**" />
     <Content Remove="wwwroot\NewFolder\**" />
     <EmbeddedResource Remove="Views\Menu\**" />
     <EmbeddedResource Remove="Views\NewFolder1\**" />
+    <EmbeddedResource Remove="Views\SimuladorGeneral\**" />
     <EmbeddedResource Remove="wwwroot\NewFolder\**" />
     <None Remove="Views\Menu\**" />
     <None Remove="Views\NewFolder1\**" />
+    <None Remove="Views\SimuladorGeneral\**" />
     <None Remove="wwwroot\NewFolder\**" />
   </ItemGroup>
 
@@ -65,18 +69,34 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.4.*" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Identity\Pages\" />
     <Folder Include="wwwroot\lib\MenuLateral\" />
 
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>
