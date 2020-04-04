@@ -13,13 +13,13 @@ namespace SimuladorBackOffice.Models
         public InputModel Input { get; set; }
         [TempData]
         public string ErrorMessage { get; set; }
-        public int cantidad { get; set; }
+        public double cantidad { get; set; }
         public int plazo { get; set; }
         public int frecuencia { get; set; }
-
-        public int amortizacion { get; set; }
+        public Double total { get; set; }
+        public Double amortizacion { get; set; }
         public double diasOperados { get; set; }
-        public double total { get; set; }
+
         public double subtotal { get; set; }
         public string day { get; set; }
         public Double interes { get; set; }
@@ -35,6 +35,9 @@ namespace SimuladorBackOffice.Models
         public DateTime fechaPrimerpago { get; set; }
         public string fechadeOperacion { get; set; }
         public string prueba { get; set; }
+        public int numamortizacion{get;set;}
+        public double saldoinicial { get; set;}
+
 
         public class InputModel
         {
@@ -48,4 +51,9 @@ namespace SimuladorBackOffice.Models
 
         }
     }
+    public class amortizacion
+    {
+        public Login[] numamortizacion { get; set; }
+    }
+   
 }

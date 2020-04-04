@@ -11,15 +11,14 @@
 <head>
 
     <link href="~/css/site.css" rel="stylesheet" />
-
-
-</head>
+ </head>
 
 <body style="background-image: url('https://us.123rf.com/450wm/apostrophe/apostrophe1303/apostrophe130300064/18622074-fondo-morado.jpg?ver=6');">
 
 
 
     <!---simulador contenedor de este-->
+
 
     <div class="container col align-self-center col-md-6">
         <div class="row align-items-start">
@@ -30,271 +29,84 @@
                     </div>
                     <div class="col align-self-center col-md-10">
                         <div class="text-dark">
-                            <form>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Monto de crédito</label>
+                            <form id="form-lead" name="forma" method="post">
+                                <!--
+    <div class="form-group">
+
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="col-form-label" for="inlineRadio1">Monto de crédito</label>
+
+    </div>
+    <div class="form-group">
+
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="col-form-label" for="inlineRadio2">Importe de Pago</label>
+
+    </div>-->
+
+                                <div class="form-group">
+                                    <label class="h5 text-gray-900 ">Monto de crédito: </label>
+                                    <input class="currency" type="text" value="10000" name="cantidad" id="cantidad" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" data-type="cantidad" placeholder="cantidad" required /><!--pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"  data-type="currency"-->
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Importe de Pago</label>
+                                <div class="form-group">
+                                    <label> <span id="cantidadR" name="cantidadR"></span></label>
+                                    <input type="range" min="10000" max="100000" step="1000" value="10000" class="slider" id="cantidadRange" name="cantidadRanged">
+
                                 </div>
-                                <br />
-                                <h1 class="h4 text-gray-900 ">Cantidad $ </h1>
-                                <input type="text" value="10000" class="redondeado" name="cantidad" id="cantidad" placeholder="cantidad" required>
-                                <br />
-                                <br />
-                                <div class="slidecontainer">
-                                    <input type="range" min="10000" max="100000" step="1000" value="10000" class="slider" id="cantidadRange">
-                                    <p>$: <span id="cantidadR"></span></p>
+                                <div class="form-group">
+                                    <label class="h5 text-gray-900">Frecuencia</label>
+                                    <select id="frecuencia" class="custom-select" name="frecuencia">
+
+                                        <option value="1">Mensual</option>
+                                        <option value="2" default>Quincenal</option>
+                                    </select>
                                 </div>
 
-                                <script>
-                                    var sliderC = document.getElementById("cantidadRange");
-                                    var outputCantidad = document.getElementById("cantidadR");
-                                    outputCantidad.innerHTML = sliderC.value;
 
-                                    sliderC.oninput = function () {
-                                        outputCantidad.innerHTML = this.value;
-                                    }
-                                </script>
-                                <!--<div class="inputDiv i1 mb-2"></div>-->
-
-                                <h1 class="h4 text-gray-900 ">Frecuencia</h1>
-                                <select id="frecuencia" class="custom-select">
-
-                                    <option value="1">Mensual</option>
-                                    <option value="2" default>Quincenal</option>
-                                </select>
-
-                                <h1 class="h4 text-gray-900 mb-4">Plazo (meses)</h1>
-
-                                <!--<div class="inputDiv i2"></div>-->
-                                <div class="slidecontainer">
-                                    <input type="range" min="10" max="50" step="1" value="10" class="slider" id="plazoR">
-                                    <p>plazo: <span id="plazoRang"></span></p>
+                                <div class="form-group">
+                                    <label class="h5 text-gray-900">Número de Pagos</label>
+  
+                                    <input value="10" min="10" max="100" name="plazo" type="text" id="plazo" placeholder="plazo" required>
                                 </div>
-                                <script>
-                                    var slider2 = document.getElementById("plazoR");
-                                    var output = document.getElementById("plazoRang");
-                                    output.innerHTML = slider2.value;
-
-                                    slider2.oninput = function () {
-                                        output.innerHTML = this.value;
-                                    }
-                                </script>
-                                <input class="redondeado" value="10" name="plazo" type="text" id="plazo" placeholder="plazo" required>
+                                <div class="form-group">
+                                    <!--<div class="inputDiv i2"></div>-->
+                                    <div class="slidecontainer">
+                                        <input type="range" min="10" max="50" step="1" value="10" class="slider" id="plazoR" name="plazoR">
+                                        <p>plazo: <span id="plazoRang" name="plazoRang"></span></p>
+                                    </div>
+                                </div>
+                                <label>Amortización</label>
                                 <br />
-                                <br />
-                                <button type="submit" name="enviar" class="btn btn-primary" id="detalle" value="enviar">
-                                    Detalle
-                                </button>
-
+                                <input readonly="readonly" class="currency sinborde" style="font-size:x-large" id="total1">
+                                <div class="form-group">
+                                    <!--	<input type="submit" id="button" name="button" value="Enviar">-->
+                                    <button class="btn-default" type="submit" id="submitform">Tabla amortización</button>
+                                </div>
                             </form>
-                            <br />
-                            <br />
-                            <h2>cantidad</h2>
-                            <h2 id="prueba">prueba</h2>
-                            <br />
-                            <br />
-                            <h2>
-                                plazo
-                            </h2>
-                            <h2 id="prueba2">prueba2</h2>
-                            <br />
-                            <br />
-                            <h2>subtotal</h2>
-                            <h2 id="subtotal">subtotal</h2>
-                            <br />
-                            <br />
+                            
 
-                            <h2>total</h2>
-                            <h2 id="total">total</h2>
-                            <br />
-                            <br />
+                            <div class="table-wrapper-scroll-y my-custom-scrollbar" id="contenedor" style="overflow-x:auto;">
 
+                            </div>
+                            <div class="form-group">
+                                <div id="zondescargas">
+                                    <!-- el contenido HTML va aqui -->
+                                </div>
 
-                            <h2>diasoperados</h2>
-                            <h2 id="diasOperados">dias operados</h2>
-                            <br />
-                            <br />
-
-                            <h2>fecha fin</h2>
-                            <h2 id="fechafin">dias operados</h2>
-                            <br />
-                            <br />
-
-                            <h2>fechainicio</h2>
-                            <h2 id="fechainicio">dias operados</h2>
-                            <br />
-                            <br />
-                            <h2>interes</h2>
-                            <h2 id="interes">dias operados</h2>
-                            <br />
-                            <br />
-                            <h2>capital</h2>
-                            <h2 id="capital">capital</h2>
-                            <br />
-                            <h2>interes dia</h2>
-                            <h2 id="interesDia">capital</h2>
-                            <br />
-                            <h2>interesTotal</h2>
-                            <h2 id="interesTotal">capital</h2>
-                            <br />
-                            <h2>ivaInteres</h2>
-                            <h2 id="ivaInteres">capital</h2>
-                            <br />
-                            <h2>iva</h2>
-                            <h2 id="iva">capital</h2>
-                            <br />
-                            <h2>comision</h2>
-                            <h2 id="comision">capital</h2>
-                            <br />
-                            <h2>seguro</h2>
-                            <h2 id="seguro">capital</h2>
-                            <br />
-                            <br />
-                            <h2>fechap´rimerpago</h2>
-                            <h2 id="fechaPrimerpago">capital</h2>
-                            <br />
-                            <h2>fechap de operacion</h2>
-                            <h2 id="fechadeOperacion">capital</h2>
-                            <h2>frecuencia1</h2>
-                            <h2 id="frecuencia1"></h2>
-                            <br />
-                            <h2>pruebatest</h2>
-                            <h2 id="pruebatest"></h2>
-                            <br />
-                            <h2>L @Model</h2>
-                            <h2>amortización</h2>
-                            <h2>$900</h2>
-
-                            <!--
-
-    <script>
-        // EL INPUT
-        var elInput3 = document.querySelector('#input3');
-        if (elInput3) {
-            var w = parseInt(window.getComputedStyle(elInput3, null).getPropertyValue('width'));
-
-            // LA ETIQUETA
-            var etq = document.querySelector('.etiqueta');
-            if (etq) {
-                // el valor de la etiqueta (el tooltip)
-                etq.innerHTML = elInput3.value;
-
-                // calcula la posición inicial de la etiqueta (el tooltip);
-                var pxls = w / 100;
-
-                etq.style.left = ((elInput3.value * pxls) - 15) + 'px';
-
-                elInput3.addEventListener('input', function () {
-                    // cambia el valor de la etiqueta (el tooltip)
-                    etq.innerHTML = elInput3.value;
-                    // cambia la posición de la etiqueta (el tooltip)
-                    etq.style.left = ((elInput3.value * pxls) - 15) + 'px';
-
-                }, false);
-            }
-        }
-        // codigo nuevo de segundo codigo de padres
-
-
-        var elementoPadre1 = document.querySelector(".inputDiv.i1");
-        var elementoPadre2 = document.querySelector(".inputDiv.i2");
-        var inputsRy = [];
-
-        function Input() {
-            //<input type="range" value="35" min="0" max="100" autocomplete="off" step="1">
-            this.att = {};
-            this.att.type = "range";
-            this.att.value = 6000;
-            this.att.min = 6000;
-            this.att.max = 100000;
-            this.att.autocomplete = "off";
-            this.att.step = "1000";
-            this.input;
-            this.output;
-
-            this.crear = function (elementoPadre) {
-                // crea un nuevo elemento input
-                this.input = document.createElement("input");
-                //para cada propiedad del objeto att establece un nuevo atributo del elemento input
-                for (var name in this.att) {
-                    if (this.att.hasOwnProperty(name)) {
-                        this.input.setAttribute(name, this.att[name]);
-                    }
-                }
-                // crea un nuevo elemento div
-                this.output = document.createElement("div");
-                // establece el valor del atributo class del nuevo div
-                this.output.setAttribute("class", "output");
-                // y el contenido (innerHTML) de este
-                this.output.innerHTML = this.att.value;
-
-                // inserta los dos elementos creados al final  del elemento Padre
-                elementoPadre.appendChild(this.input);
-                elementoPadre.appendChild(this.output);
-            }
-
-            this.actualizar = function () {
-                this.output.innerHTML = this.input.value;
-                this.att.value = this.input.value;
-            }
-        }
-
-        // setup
-        var i = new Input();
-        i.crear(elementoPadre1);
-        inputsRy.push(i);
-
-        var i2 = new Input();
-        i2.att.value = 6;
-        i2.att.min = 6;
-        i2.att.max = 45;
-        i2.att.step = 6;
-        i2.crear(elementoPadre2);
-        inputsRy.push(i2);
-
-        for (var n = 0; n < inputsRy.length; n++) {
-            (function (n) {
-                inputsRy[n].input.addEventListener("input", function () {
-                    inputsRy[n].actualizar();
-                }, false)
-            }(n));
-        }
-
-        /* Draw
-        function Draw(){
-         requestId = window.requestAnimationFrame(Draw);
-          for( var n = 0; n< inputsRy.length; n++){
-            inputsRy[n].update();
-          }
-        }
-
-        requestId = window.requestAnimationFrame(Draw);
-        */
-                                                                                                                                                        // JavaScript Document
-
-    </script>
-        -->
-                            <br />
+                                <div id="elementH"></div>
+                            </div>
+                            </div>
                         </div>
-
-                        <br />
-
-                    </div>
                 </div>
-                <br />
-                <div class="col"></div>
-
-
             </div>
         </div>
     </div>
-    <br />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="~/js/jsPDF-1.3.2/dist/jspdf.min.js"></script>
+    <script src="~/js/jsPDF-AutoTable-master/dist/jspdf.plugin.autotable.js"></script>
+    <script src="~/js/Inputmask-5.x/dist/inputmask.js"></script>
+    <script src="~/js/Inputmask-5.x/dist/jquery.inputmask.js"></script>
     <script src="../js/Simulador.js"></script>
 
     <!--fin de simulador-->

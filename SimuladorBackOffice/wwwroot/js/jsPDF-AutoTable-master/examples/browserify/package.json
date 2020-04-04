@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "dependencies": {
+    "jspdf": "^1.5.3",
+    "jspdf-autotable": "^3.2.15"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0"
+  },
+  "scripts": {
+    "build": "browserify main.js > bundle.js"
+  }
+}
