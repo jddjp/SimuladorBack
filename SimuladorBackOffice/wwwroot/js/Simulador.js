@@ -301,8 +301,53 @@ $("#form-lead").submit(function (event) {
             $('#idtabla').append(fila);
             for (i = 0; i < res.length; i++)
             {
-                arrayTab[i] = res[i];
-                var filas = "<tr class='currency'><td>" + (i + 1) + "</td><td class='currency'>" + "<input readonly='readonly' class='currency' value=" + res[i].total + "></td><td>" + res[i].fechafin + "</td><tr>";//"<th><th>" + res[i].capital + "<th><th type='hidden'>" + res[i].subtotal + "<th><th>" + res[i].iva + "<th><th>" + res[i].seguro + "<th><th>" + res[i].comision + "<th><th>" 
+                var selector = res[i].total;
+                var formattedTotal = Inputmask.format(res[i].total, {alias: "numeric", radixPoint: ".",groupSeparator: ",",
+                    digits: 2, autoGroup: true, prefix: '$', rightAling: false,});
+                console.log(selector + formattedTotal);                
+                res[i].total = formattedTotal;
+                var formattedcapital = Inputmask.format(res[i].capital, {
+                    alias: "numeric", radixPoint: ".", groupSeparator: ",",
+                    digits: 2, autoGroup: true, prefix: '$', rightAling: false,
+                });
+                console.log(selector + formattedcapital);
+                res[i].capital = formattedcapital;
+                var formattedsubtotal = Inputmask.format(res[i].subtotal, {
+                    alias: "numeric", radixPoint: ".", groupSeparator: ",",
+                    digits: 2, autoGroup: true, prefix: '$', rightAling: false,
+                });
+                console.log(selector + formattedsubtotal);
+                res[i].subtotal = formattedsubtotal;
+                var formattedcomision = Inputmask.format(res[i].total, {
+                    alias: "numeric", radixPoint: ".", groupSeparator: ",",
+                    digits: 2, autoGroup: true, prefix: '$', rightAling: false,
+                });
+                console.log(selector + formattedcomision);
+                res[i].comision = formattedcomision;
+                var formattedseguro = Inputmask.format(res[i].seguro, {
+                    alias: "numeric", radixPoint: ".", groupSeparator: ",",
+                    digits: 2, autoGroup: true, prefix: '$', rightAling: false,
+                });
+                console.log(selector + formattedseguro);
+                res[i].seguro = formattedseguro;
+                var formattedinteres = Inputmask.format(res[i].interes, {
+                    alias: "numeric", radixPoint: ".", groupSeparator: ",",
+                    digits: 2, autoGroup: true, prefix: '$', rightAling: false,
+                });
+                console.log(selector + formattedinteres);
+                res[i].interes = formattedinteres;
+                var formattediva = Inputmask.format(res[i].iva, {
+                    alias: "numeric", radixPoint: ".", groupSeparator: ",",
+                    digits: 2, autoGroup: true, prefix: '$', rightAling: false,
+                });
+                console.log(selector + formattediva);
+                res[i].iva = formattediva;
+                var formattedDate = Inputmask.format(res[i].fechafin, { alias: "datetime", inputFormat: "yyyy/mm/dd" });
+                res[i].fechafin = formattedDate;
+                console.log("enmascarado" + formattedDate);
+
+                arrayTab[i] = res[i];//moviendo al otro arreglo para la impresion del pdf
+                var filas = "<tr class='currency'><td>" + (i + 1) + "</td><td class='currency'>" + res[i].total + "</td><td>" + res[i].fechafin + "</td><tr>";//"<th><th>" + res[i].capital + "<th><th type='hidden'>" + res[i].subtotal + "<th><th>" + res[i].iva + "<th><th>" + res[i].seguro + "<th><th>" + res[i].comision + "<th><th>" 
                 $('#idtabla').append(filas);
             }
             var jQueryBoton = $("<button onclick='myFuncion()'>Descargar</button>");
