@@ -421,7 +421,7 @@ function myFuncion() {
         //tabla
 
 
-        var columns = ["n.pago", "capital", "interes", "iva", "seguro", "comision", "fecha pago", "pago total"];
+        var columns = ["n.pago", "capital", "interes", "seguro", "comisión", "fecha pago", "pago total"];
         //   var data = [
         //       [1, "Hola", "hola@gmail.com", "Mexico"],
         //       [2, "Hello", "hello@gmail.com", "Estados Unidos"],
@@ -459,7 +459,7 @@ function myFuncion() {
 
         for (i = 0; i < arrayTab.length; i++) {
             ta = [
-                arrayTab[i] = [arrayTab[i].numamortizacion, arrayTab[i].capital, arrayTab[i].interes, arrayTab[i].iva, arrayTab[i].seguro, arrayTab[i].comision, arrayTab[i].fechafin, arrayTab[i].total]
+                arrayTab[i] = [arrayTab[i].numamortizacion, arrayTab[i].capital, arrayTab[i].interes, arrayTab[i].seguro, arrayTab[i].comision, arrayTab[i].fechafin, arrayTab[i].total]
             ];
         }
         console.log(ta);
@@ -481,10 +481,10 @@ function myFuncion() {
             'elementHandlers': specialElementHandlers
         });
         //tabla
-        var columns = ["n.pago", "capital", "interes", "iva", "seguro", "comision", "fecha pago", "pago total"];
+        var columns = ["n.pago", "capital", "interes", "seguro", "comisión", "fecha pago", "pago total"];
 
         doc.setFontSize(22);
-        doc.text(40, 40, 'Datos del credito');
+        doc.text(40, 40, 'Datos del crédito');
         //   doc.setFontSize(15);
         //   doc.text(20, 80, 'Monto solicitado');
         //   doc.text(150, 80,c );
